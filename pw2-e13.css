@@ -96,6 +96,10 @@ color:red;
 font-size: 5.0em;
 }
 
+#separacion{
+    width: 50px;
+}
+
 .negritas{
 font-weight: bold;
 }

@@ -14,7 +14,7 @@
         <div class="ejercicio" id="ejercicio1">
             <h2>Ejercicio 1</h2>
 
-            <p>Al elemento #contenedor, cambia su color de fondo por cualquier otro</p>
+            <p>Al elemento #contenedor, cambia su color de fuente y borde.</p>
 
             <div class="resultado">
                 <input type="button" value="Resultado">
@@ -65,14 +65,14 @@
         <div class="ejercicio" id="ejercicio3">
             <h2>Ejercicio 3</h2>
 
-            <p>Cambia el valor de los atributos de #dia-noche de la siguiente manera</p>
+            <p>Ajusta el valor de los atributos de #dia-noche de la siguiente manera</p>
             <ul>
                 <li>Cambia la imagen por <code>img/noche.png</code></li>
                 <li>Ancho de la imagen a 200</li>
                 <li>Alto de la imagen a 193</li>
             </ul>
 
-            <p>Nota: utiliza el método .attr() sólo una vez.</p>
+            <p>Nota: utiliza el método .attr() <b>sólo una vez</b>.</p>
 
 
             <div class="resultado">
@@ -90,11 +90,12 @@
 
             <ul>
                 <li>Al presionar el botón #hello deberá cambiarlo a "hello"</li>
-                <li>El botón #world deberá cambiar el texto a "world"</li>
-                <li>El botón #negritas deberá aplicar estilo de fuente negritas. Al presionarlo nuevamente deberá quitar el estilo.</li>
-                <li>El botón #cursivas deberá aplicar estilo de fuente cursivas. Al presionarlo nuevamente deberá quitar el estilo.</li>
-                <li>El botón #subrayado deberá aplicar estilo de texto subrayado. Al presionarlo nuevamente deberá quitar el estilo.</li>
-                <li>El botón #tamano deberá intercalar el cambio de minúsculas a mayúsculas. Al presionarlo nuevamente deberá hacer la operación inversa.</li>
+                <li>Botón #world deberá cambiar el texto a "world"</li>
+                <li>Botón #negritas deberá aplicar estilo de fuente negritas. Al presionarlo nuevamente deberá quitar el estilo.</li>
+                <li>Botón #cursivas deberá aplicar estilo de fuente cursivas. Al presionarlo nuevamente deberá quitar el estilo.</li>
+                <li>Botón #subrayado deberá aplicar estilo de texto subrayado. Al presionarlo nuevamente deberá quitar el estilo.</li>
+                <li>El campo #separacion ajustará la distancia de separación entre caracteres.</li>
+                <li>Botón #tamano deberá intercalar el cambio de minúsculas a mayúsculas. Al presionarlo nuevamente deberá hacer la operación inversa.</li>
                 <li>El campo #color deberá cambiar el color de fuente al escoger un color.</li>
             </ul>
 
@@ -110,8 +111,9 @@
                     <input type="button" onclick="aplicarCambioNegritas()" value="negritas" id="negritas">
                     <input type="button" onclick="aplicarCambioCursivas()" value="cursivas" id="cursivas">
                     <input type="button" onclick="aplicarCambioSubrayado()" value="subrayado" id="subrayado">
+                    <input type="number" onchange="aplicarCambioSeparacion( this.value )" id="separacion" value="0"/>
                     <input type="button" onclick="aplicarCambioTamano()" value="tamaño" id="tamano">
-                    <input type="color" onchange="aplicarCambioColor( this.value )" id="color">
+                    <input type="color" onchange="aplicarCambioColor( this.value )" id="color" value="">
                 </div>
                 <div id="hello-world">
                     hello-world
@@ -122,13 +124,18 @@
         <div class="ejercicio" id="ejercicio4">
             <h2>Ejercicio 4</h2>
 
-            <p>Deshabilita el botón #deshabilitame</p>
+            <p>Desactiva #deshabilitame</p>
 
             <div class="resultado">
                 <input type="button" value="Resultado" />
 
                 <div>
-                    <input type="button" id="deshabilitame" value="Continuar">
+                    <select id="deshabilitame">
+                        <option value="">Seleccione una opción...</option>
+                        <option value="1">Valor uno</option>
+                        <option value="2">Valor dos</option>
+                        <option value="3">Valor tres</option>
+                    </select>
                 </div>
             </div>
         </div>
@@ -137,17 +144,29 @@
         <div class="ejercicio" id="ejercicio5">
             <h2>Ejercicio 5</h2>
 
-            <p>Desmarca todos los checkbox (vía código...)</p>
+            <p>Desmarca todos los checkbox, marca el cuarto radiobutton</p>
+
+            <p>Nota: usando código...</p>
 
             <div class="resultado">
                 <input type="button" value="Resultado" />
 
+                <h4>Desmarcar</h4>
                 <div id="desmarca">
                     <input type="checkbox" checked="checked"> Desmarcame<br>
                     <input type="checkbox" checked="checked"> Desmarcame<br>
                     <input type="checkbox" checked="checked"> Desmarcame<br>
                     <input type="checkbox" checked="checked"> Desmarcame<br>
                     <input type="checkbox" checked="checked"> Desmarcame<br>
+                </div>
+
+                <h4>Marcar</h4>
+                <div id="marca">
+                    <input type="radio"/> Radio 1<br>
+                    <input type="radio"/> Radio 2<br>
+                    <input type="radio"/> Radio 3<br>
+                    <input type="radio"/> Radio 4<br>
+                    <input type="radio"/> Radio 5<br>
                 </div>
             </div>
         </div>
@@ -156,8 +175,7 @@
             <h2>Ejercicio 6</h2>
 
             <p>Cambia el ancho y alto del elemento #quiero-crecer a las medidas especificadas en sus atributos data-*.</p>
-            <p>Las medidas originales guárdalas en #quiero-crecer creando las llaves ancho-original y alto-original respectivamente.</p>
-            <p>Nota: utiliza el método .data() para leer y establecer los atributos data-*</p>
+            <p>Tipo: utiliza el método .data()</p>
 
             <div class="resultado">
                 <input type="button" value="Resultado" />
@@ -206,7 +224,11 @@
 
             <p>Mueve al elemento #hijo del #padre a #madre</p>
 
+            <p>Tip: usa el método <a href="https://api.jquery.com/detach/" target="_blank" title="Ir a la documentación">detach()</a></p>
+
             <div class="resultado">
+                <input type="button" value="Resultado" /><br/>
+
                 <div id="padre">
                     <p>Padre</p>
                         <span id="hijo">Hijo</span>
@@ -310,7 +332,7 @@
                 <li>Cambia el color de fondo a gray del abuelo</li>
                 <li>Cambia el color de fuente a white de todos los descendientes del albuelo</li>
             </ol>
-            <p>Utiliza los métodos diseñados para desplazarte por el DOM, y llámalos de manera encadenada y secuencial.</p>
+            <p>Utiliza los métodos diseñados para desplazarte por el DOM, y llámalos de manera <b>encadenada</b> y secuencial.</p>
 
 
             <div class="resultado">
@@ -536,7 +558,7 @@
             <ul>
                 <li>El usuario no se debe ser el mismo a alguno de los que se encuentran dentro del arreglo usuariosRegistrados (variable global en el código JS).</li>
                 <li>La contraseña #contra2 debe ser igual a #contra1.</li>
-                <li>El campo #acuerdos debe estar marcado (checked).</li>
+                <li>El campo #acuerdos debe estar marcado (<i>checked</i>).</li>
             </ul>
 
             <p>En caso de error, muestra un mensaje que avise sobre dicho error dentro en #errores (oculto inicialmente).</p>
@@ -619,7 +641,7 @@
 
             <p>Realiza la siguientes acciones en la #galeria-animales:</p>
             <ul>
-                <li>Se deberá mostrar y ocultar la #galeria-animales al dar click sobre el botón #boton-galeria (dependiendo del estado es la acción a realizar).</li>
+                <li>Se deberá mostrar y ocultar la #galeria-animales al dar clic sobre el botón #boton-galeria (dependiendo del estado es la acción a realizar).</li>
                 <li>Mostrar el pie de la foto cuando se posicione el puntero del mouse sobre la imágen (mouseenter) y ocultarlo cuando el puntero salga de la foto (mouseleave)</li>
             </ul>
             <p>Mostrar y ocultar deben ser con la animación slide.</p>
@@ -658,7 +680,7 @@
 
             <p>Realiza las siguientes acciones:</p>
             <ul>
-                <li>Al dar click en cualquier foto miniatura de #galeria-miniaturas deberá mostrarse su versión completa dentro del contenedor #galeria-miniaturas-completa.</li>
+                <li>Al dar clic en cualquier foto miniatura de #galeria-miniaturas deberá mostrarse su versión completa dentro del contenedor #galeria-miniaturas-completa.</li>
                 <li>La imagen completa que se esté mostrando deberá desvanecer (fadeOut) hasta ocultarse y al terminar dicha animación, la nueva imagen debe ser mostrada con la animación opuesta (FadeIn).</li>
             </ul>
 
@@ -720,8 +742,8 @@
 
             <p>El administrador de tareas permitirá al usuario agregar y eliminar tareas.</p>
             <p>Al escribir una nueva tarea en el campo #nueva-tarea y seleccionar la fecha de realización con el campo #fecha-tarea (validar que ambos campos estén llenos), dicha información se debe agregar al final de la tabla #mis-tareas, en las columnas correspondientes.</p>
-            <p>Se deberá eliminar el renglón de la tarea al dar click sobre la liga .eliminar. Confirmar con el método window.confirm() antes de eliminar.</p>
-            <p>Nota: delega el evento click del elemento .eliminar a la tabla #mis-tareas</p>
+            <p>Se deberá eliminar el renglón de la tarea al dar clic sobre la liga .eliminar. Confirmar con el método window.confirm() antes de eliminar.</p>
+            <p>Nota: delega el evento clic del elemento .eliminar a la tabla #mis-tareas</p>
 
             <div class="resultado">
                 <input type="text" id="nueva-tarea" placeholder="Nueva tarea" />
