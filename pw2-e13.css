@@ -52,14 +52,19 @@ text-align:center;
 padding:10px;
 }
 
-input {
-border:1px solid #888;
-outline:none;
-padding:7px;
+input{
+    border: 1px solid #888;
+    outline: none;
+    padding: 7px;
 }
+
 
 input[type='button'],input[type='submit'] {
 padding:7px 14px;
+}
+
+input[type='button']:hover,input[type='submit']:hover{
+    background-color: #f4f4f4;
 }
 
 .demo {
