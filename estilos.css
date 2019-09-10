@@ -280,3 +280,6 @@ text-indent:10px;
 top:auto;
 color:#FFF;
 }
+#sumas th{
+    width: 100px;
+}

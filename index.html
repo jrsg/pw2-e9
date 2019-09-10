@@ -7,14 +7,15 @@
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-        <link rel="stylesheet" type="text/css" href="pw2-e13.css" />
-        <script src="pw2-e13.js"></script>
+        <link rel="stylesheet" type="text/css" href="estilos.css" />
+        <script src="ejercicios.js"></script>
     </head>
     <body>
         <div class="ejercicio" id="ejercicio1">
             <h2>Ejercicio 1</h2>
 
-            <p>Al elemento #contenedor, cambia su color de fuente y borde.</p>
+            <p>Al elemento #contenedor, cambia su color de fuente, borde y fondo.</p>
+            <p>Nota: utiliza 3 colores distintos</p>
 
             <div class="resultado">
                 <input type="button" value="Resultado">
@@ -144,7 +145,7 @@
         <div class="ejercicio" id="ejercicio5">
             <h2>Ejercicio 5</h2>
 
-            <p>Desmarca todos los checkbox, marca el cuarto radiobutton</p>
+            <p>Desmarca todos los checkbox, marca el <b>cuarto</b> radiobutton</p>
 
             <p>Nota: usando código...</p>
 
@@ -175,7 +176,7 @@
             <h2>Ejercicio 6</h2>
 
             <p>Cambia el ancho y alto del elemento #quiero-crecer a las medidas especificadas en sus atributos data-*.</p>
-            <p>Tipo: utiliza el método .data()</p>
+            <p>Nota: utiliza el método .data()</p>
 
             <div class="resultado">
                 <input type="button" value="Resultado" />
@@ -414,11 +415,11 @@
                 <table id="sumas">
                     <thead>
                         <tr>
-                            <th width="100">num1</th>
-                            <th width="100">operacion</th>
-                            <th width="100">num2</th>
-                            <th width="100">igual</th>
-                            <th width="100">resultado</th>
+                            <th>num1</th>
+                            <th>operacion</th>
+                            <th>num2</th>
+                            <th>igual</th>
+                            <th>resultado</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -619,17 +620,17 @@
                     $ <input type="number" id="pesos"> pesos <br>
                 </div>
                 <div class="conversor">
-                    <div id="dolares" class="divisa" data-cambio="13.50">
+                    <div id="dolares" class="divisa" data-cambio="19.50">
                         <h4>0</h4>
                         <h5>Dolares</h5>
                     </div>
 
-                    <div id="euros" class="divisa" data-cambio="17.50">
+                    <div id="euros" class="divisa" data-cambio="21.54">
                         <h4>0</h4>
                         <h5>Euros</h5>
                     </div>
 
-                    <div id="libras" class="divisa" data-cambio="21.50">
+                    <div id="libras" class="divisa" data-cambio="24.09">
                         <h4>0</h4>
                         <h5>Libras</h5>
                     </div>
@@ -747,6 +748,7 @@
             <p>Al escribir una nueva tarea en el campo #nueva-tarea y seleccionar la fecha de realización con el campo #fecha-tarea (validar que ambos campos estén llenos), dicha información se debe agregar al final de la tabla #mis-tareas, en las columnas correspondientes.</p>
             <p>Se deberá eliminar el renglón de la tarea al dar clic sobre la liga .eliminar. Confirmar con el método window.confirm() antes de eliminar.</p>
             <p>Nota: delega el evento clic del elemento .eliminar a la tabla #mis-tareas</p>
+            <p>Reto: implementa la funcionalidad de <b>editar</b> tareas</p>
 
             <div class="resultado">
                 <input type="text" id="nueva-tarea" placeholder="Nueva tarea" />
